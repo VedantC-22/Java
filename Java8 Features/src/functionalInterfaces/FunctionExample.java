@@ -1,6 +1,8 @@
 package functionalInterfaces;
 
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 //What is a Function Interface?
 //The Function<T, R> interface in Java is a built-in functional interface in the java.util.function package. 
@@ -38,6 +40,20 @@ public class FunctionExample {
 		
 		Function<Integer, Integer> cubeThenSquare = squares.compose(cubes);
 		System.out.println(cubeThenSquare.apply(2)); //64
+		
+		//Or 
+		//1. UnaryOperator interface -> The UnaryOperator<T> interface is a functional interface that represents an operation on a single operand that returns a result of the same type.
+		//2.BinaryOperator interface -> The BinaryOperator<T> interface represents an operation upon two operands of the same type, producing a result of the same type.
+		//The UnaryOperator<T> and BinaryOperator<T> interfaces are specialized versions of the Function<T, R> interface in Java
+		//used for operations on a single or two operands of the same type. 
+		//They belong to the java.util.function package.
+		
+		UnaryOperator<Integer> cube = num -> (int)Math.round(Math.pow(num, 3));
+		System.out.println(cube.apply(5)); //125
+		
+		BinaryOperator<String> concate = (str1, str2) -> str1.concat(str2);
+		System.out.println(concate.apply("Vedant", "Chaudhari")); //VedantChaudhari
+		
 	}
 
 }
