@@ -1,15 +1,13 @@
 package Stream;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.lang.reflect.Field;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamIntermediateOperations {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 		List<Integer> nums = Arrays.asList(1,5,3,2,4,20,35,69,78,10,2,54,3,6,75,21);
 		List<String> names = Arrays.asList("Vedant", "Dhiraj", "Akshay", "Chetan", "Shivam", "Ved", "Dhirendra", "Vedant");
 		
@@ -45,6 +43,20 @@ public class StreamIntermediateOperations {
 		System.out.println(Stream.iterate(5, x -> x + 5).limit(100).collect(Collectors.toList()));
 		Stream.iterate(5, x -> x + 5).skip(5).limit(100)
 		.forEach(System.out::println); //it will skip first n elements from sequence
+		
+		//6. flatMap
+		List<String> sentence = Arrays.asList("Hello how are you?", "whar are doing?");
+		List<String> flatmap = sentence.stream().flatMap(x -> Arrays.stream(x.split(" "))).toList();
+		
+		List<List<String>> fruits = Arrays.asList(
+				Arrays.asList("apple", "mango"),
+				Arrays.asList("kiwi", "banana"),
+				Arrays.asList("grapes", "papaya")
+		);
+		
+		List<String> fruitList = fruits.stream().flatMap(x -> x.stream()).toList();
+		System.out.println(fruitList);
+				
 		
 		//Terminal Operations
 		//1.Collect
@@ -91,6 +103,25 @@ public class StreamIntermediateOperations {
 			//✅ Efficient for processing large text data using Streams.
 			String str = "Hello, world";
 			System.out.println(str.chars().filter(x -> x == 'l').count());
+		
+		//7. peek()
+			List<Integer> n = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7));
+			List<Integer> squares = n.stream().peek(x -> System.out.println("Befor square " + x)).map(x -> x * x).peek(x -> System.out.println("After squaring " + x)).toList();
+		
+		//8. toArray()
+			
+			Object[] arr = n.stream().map(x -> x * x).toArray();
+			
+		//9. min/max
+			Optional<Integer> y = Stream.of(12,58,63,4,936,95,72,64,20,63,46,85).min(Comparator.naturalOrder());
+			System.out.println(y);
+			Optional<Integer> x = Stream.of(12,58,63,4,936,95,72,64,20,63,46,85).min((a, b) -> b - a);
+			System.out.println(x);
+			
+		//10. forEachOrdered
+			List<Integer> numslist = Arrays.asList(1,2,3,4,5,6,7,8,9,10,12);
+			numslist.parallelStream().forEach(System.out::println);
+			numslist.parallelStream().forEachOrdered(System.out::println);
 			
 	}
 
