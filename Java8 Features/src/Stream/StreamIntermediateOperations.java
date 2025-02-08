@@ -12,13 +12,13 @@ public class StreamIntermediateOperations {
 		List<String> names = Arrays.asList("Vedant", "Dhiraj", "Akshay", "Chetan", "Shivam", "Ved", "Dhirendra", "Vedant");
 		
 		//1.Filter
-		
 		//List of names starting with specific letter
+		System.out.println("--------Filter--------");
 		List<String> startWith = names.stream().filter( x -> x.toLowerCase().startsWith("v")).collect(Collectors.toList());
 		System.out.println(startWith);
 		
 		//2.sorted
-		
+		System.out.println("--------Sorted--------");
 		Stream<Integer> sortedStream = nums.stream().sorted();
 		System.out.println(sortedStream.collect(Collectors.toList()));
 		
@@ -26,7 +26,7 @@ public class StreamIntermediateOperations {
 		System.out.println(sorted.collect(Collectors.toList()));
 		
 		//3.distinct
-		
+		System.out.println("--------Distinct--------");
 		//it counts names starting with 'v', it may include duplicate entries.
 		long res = names.stream().filter(x -> x.toLowerCase().startsWith("v")).count();
 		System.out.println(res); //3
@@ -36,15 +36,18 @@ public class StreamIntermediateOperations {
 		System.out.println(res2); //2
 		
 		//4.Limit
+		System.out.println("--------Limit--------");
 		System.out.println(Stream.iterate(5, x -> x * 2).limit(100).collect(Collectors.toList()));
 		System.out.println(Stream.generate(() -> 1).limit(20).collect(Collectors.toList()));
 		
 		//5.skip
+		System.out.println("--------Skip--------");
 		System.out.println(Stream.iterate(5, x -> x + 5).limit(100).collect(Collectors.toList()));
 		Stream.iterate(5, x -> x + 5).skip(5).limit(100)
 		.forEach(System.out::println); //it will skip first n elements from sequence
 		
 		//6. flatMap
+		System.out.println("--------FlatMap--------");
 		List<String> sentence = Arrays.asList("Hello how are you?", "whar are doing?");
 		List<String> flatmap = sentence.stream().flatMap(x -> Arrays.stream(x.split(" "))).toList();
 		
@@ -60,17 +63,21 @@ public class StreamIntermediateOperations {
 		
 		//Terminal Operations
 		//1.Collect
+		System.out.println("--------Collect--------");
 			Set<String> upperName = names.stream().map(x -> x.toUpperCase()).collect(Collectors.toSet());
 			System.out.println(upperName);
 		
 		//2.forEach
+		System.out.println("--------Foreach--------");
 			names.stream().forEach(System.out::println);
 		
 		//3.reduce: combines elements to produce a single result
+		System.out.println("--------Reduce--------");
 			long res1 = nums.stream().reduce(2, (x, y) -> x + y);
 			System.out.println(res1);
 			
 		//4.anyMatch, allMatch, noneMatch
+		System.out.println("--------anyMatch, allMatch, noneMatch--------");
 			boolean ans = nums.stream().anyMatch((x) -> x % 4 == 0);
 			System.out.println(ans);
 			
@@ -84,6 +91,7 @@ public class StreamIntermediateOperations {
 			System.out.println(nums.stream().noneMatch(x -> x < 0)); //true becoz, all numbers are positive
 	
 		//6. findFirst, findAny
+		System.out.println("--------findFirst, findAny--------");
 			System.out.println(names.stream().findFirst().get());
 			System.out.println(names.stream().findAny().get());
 			
@@ -105,20 +113,23 @@ public class StreamIntermediateOperations {
 			System.out.println(str.chars().filter(x -> x == 'l').count());
 		
 		//7. peek()
+		System.out.println("--------peek()--------");
 			List<Integer> n = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7));
 			List<Integer> squares = n.stream().peek(x -> System.out.println("Befor square " + x)).map(x -> x * x).peek(x -> System.out.println("After squaring " + x)).toList();
 		
 		//8. toArray()
-			
+			System.out.println("--------toArray()--------");
 			Object[] arr = n.stream().map(x -> x * x).toArray();
 			
 		//9. min/max
+			System.out.println("--------min/max--------");
 			Optional<Integer> y = Stream.of(12,58,63,4,936,95,72,64,20,63,46,85).min(Comparator.naturalOrder());
 			System.out.println(y);
 			Optional<Integer> x = Stream.of(12,58,63,4,936,95,72,64,20,63,46,85).min((a, b) -> b - a);
 			System.out.println(x);
 			
 		//10. forEachOrdered
+			System.out.println("--------forEachOrdered--------");
 			List<Integer> numslist = Arrays.asList(1,2,3,4,5,6,7,8,9,10,12);
 			numslist.parallelStream().forEach(System.out::println);
 			numslist.parallelStream().forEachOrdered(System.out::println);
