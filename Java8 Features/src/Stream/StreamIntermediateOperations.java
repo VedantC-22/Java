@@ -46,7 +46,7 @@ public class StreamIntermediateOperations {
 		
 		//6. flatMap
 		List<String> sentence = Arrays.asList("Hello how are you?", "whar are doing?");
-		List<String> flatmap = sentence.stream().flatMap(x -> Arrays.stream(x.split(" "))).toList();
+		List<String> flatmap = sentence.stream().flatMap(x -> Arrays.stream(x.split(" "))).collect(Collectors.toList());
 		
 		List<List<String>> fruits = Arrays.asList(
 				Arrays.asList("apple", "mango"),
