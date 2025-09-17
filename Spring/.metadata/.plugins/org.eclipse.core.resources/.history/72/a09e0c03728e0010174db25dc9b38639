@@ -1,0 +1,11 @@
+package com.springcore.ci;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/ci/ciConfig.xml");
+		Person person = context.getBean("person", Person.class);
+	}
+}

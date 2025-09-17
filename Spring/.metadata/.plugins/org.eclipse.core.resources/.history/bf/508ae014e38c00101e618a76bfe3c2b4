@@ -1,0 +1,25 @@
+package com.springcore;
+
+import java.util.List;
+
+public class Courses {
+	
+	List<String> coursesList;
+	
+	public Courses() {
+
+	}
+	
+	public Courses(List<String> coursesList) {
+		this.coursesList = coursesList;
+	}
+	
+	public List<String> getCoursesList() {
+		return coursesList;
+	}
+	
+	public void setCoursesList(List<String> coursesList) {
+		this.coursesList = coursesList;
+	}
+
+}

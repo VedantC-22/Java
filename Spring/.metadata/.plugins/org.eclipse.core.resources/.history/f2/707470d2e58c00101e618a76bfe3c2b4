@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+   xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd 
+  http://www.springframework.org/schema/util
+  http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!-- This is our bean -->
+	<bean id="student1" class="com.springcore.Student">
+		<property name="name" value="Vedant Chaudhari" />
+		<property name="id" value="211" />
+		<property name="address" >
+			<value>Somatane phata, Pune</value>
+		</property>
+		
+		<property name="props" >
+   	         <props>
+   	         	<prop key="readSql">"select * from student"</prop>
+   	         </props>
+   	         </property>
+  	</bean>
+  
+  <!-- P schema example -->
+  <bean id="student2" class="com.springcore.Student" p:id="212" p:name="Shivam" p:address="Earth" />
+  
+  
+      <util:list id="courses" value-type="java.lang.String">
+          <value>Java</value>
+          <value>Python</value>
+          <value>JavaScript</value>
+          <value>HTML</value>
+          <value>CSS</value>
+          <null/>
+        </util:list>
+   
+   <bean id="cmap" class="com.springcore.Courses">
+       <property name="courseMap">
+        <map>
+				<entry key="course1" value="Java" />
+				<entry key="course2" value="Python" />
+				<entry key="course3" value="JavaScript" />
+				<entry key="course4" value="HTML" />
+				<entry key="course5" value="CSS" />
+				
+        </map>
+       </property>
+   	</bean>
+   	
+   	
+   	<bean id="" class="com.spring.Student">
+   	         
+   	</bean>
+</beans>

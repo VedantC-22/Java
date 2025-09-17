@@ -1,0 +1,25 @@
+package com.springcore.ci;
+
+public class Addition {
+	private int a;
+	private int b;
+
+	public Addition(int a, int b) {
+		super();
+		this.a = a;
+		this.b = b;
+		System.out.println("Constructor with two arguments");
+	}
+
+	public Addition(double a, double b) {
+		System.out.println("Constructor with two double arguments");
+		this.a = (int) a;
+		this.b = (int) b;
+	}
+
+	public Addition(String a, String b) {
+		System.out.println("Constructor with two String arguments");
+		this.a = Integer.parseInt(a);
+		this.b = Integer.parseInt(b);
+	}
+}

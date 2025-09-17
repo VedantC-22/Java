@@ -1,0 +1,2682 @@
+!SESSION 2025-09-12 23:04:33.828 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+This is a continuation of log file D:\java programs\Spring\.metadata\.bak_0.log
+Created Time: 2025-09-12 23:29:59.790
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2025-09-12 23:29:59.791
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/releases/2025-09.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:185)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:131)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:65)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:849)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:519)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:112)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:107)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:165)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:131)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:65)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:849)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:519)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:112)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:107)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:238)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:220)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:302)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.updatesFor(SimplePlanner.java:979)
+	at org.eclipse.equinox.p2.operations.UpdateOperation.updatesFor(UpdateOperation.java:146)
+	at org.eclipse.equinox.p2.operations.UpdateOperation.computeProfileChangeRequest(UpdateOperation.java:183)
+	at org.eclipse.equinox.p2.operations.UpdateOperation.lambda$0(UpdateOperation.java:320)
+	at org.eclipse.equinox.internal.p2.operations.SearchForUpdatesResolutionJob.runModal(SearchForUpdatesResolutionJob.java:41)
+	at org.eclipse.equinox.p2.operations.ProfileChangeOperation.resolveModal(ProfileChangeOperation.java:117)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater.updatesAvailable(AutomaticUpdater.java:121)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater.updatesAvailable(AutomaticUpdater.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler$2.updatesAvailable(AutomaticUpdateScheduler.java:156)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:89)
+Caused by: org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/releases/2025-09/202509101001/content.xml.xz.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:469)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:143)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.getLocalFile(XZedSimpleMetadataRepositoryFactory.java:63)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:83)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:65)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:849)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:519)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:112)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:107)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:165)
+	... 38 more
+Caused by: org.apache.hc.core5.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 774976; received: 146864)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1002 2025-09-12 23:29:59.791
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2025-09.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/releases/2025-09/202509101001/content.xml.xz.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:469)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:143)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.getLocalFile(XZedSimpleMetadataRepositoryFactory.java:63)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:83)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:65)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:849)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:519)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:112)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:107)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:165)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:131)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:65)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:849)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:519)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:112)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:107)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:165)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:131)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:65)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:849)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:447)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:230)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:519)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:112)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:107)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.loadMetadataRepository(ProvisioningContext.java:238)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedMetadataRepositories(ProvisioningContext.java:220)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getMetadata(ProvisioningContext.java:302)
+	at org.eclipse.equinox.internal.p2.director.SimplePlanner.updatesFor(SimplePlanner.java:979)
+	at org.eclipse.equinox.p2.operations.UpdateOperation.updatesFor(UpdateOperation.java:146)
+	at org.eclipse.equinox.p2.operations.UpdateOperation.computeProfileChangeRequest(UpdateOperation.java:183)
+	at org.eclipse.equinox.p2.operations.UpdateOperation.lambda$0(UpdateOperation.java:320)
+	at org.eclipse.equinox.internal.p2.operations.SearchForUpdatesResolutionJob.runModal(SearchForUpdatesResolutionJob.java:41)
+	at org.eclipse.equinox.p2.operations.ProfileChangeOperation.resolveModal(ProfileChangeOperation.java:117)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater.updatesAvailable(AutomaticUpdater.java:121)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater.updatesAvailable(AutomaticUpdater.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler$2.updatesAvailable(AutomaticUpdateScheduler.java:156)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:89)
+Caused by: org.apache.hc.core5.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 774976; received: 146864)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2025-09-12 23:29:59.791
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2025-09/202509101001/content.xml.xz.
+!STACK 0
+org.apache.hc.core5.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 774976; received: 146864)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:06.317
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:06.318
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:21.513
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:21.513
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:21.514
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:22.054
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:22.055
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:22.210
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:22.211
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:22.573
+!MESSAGE [Info]	[fetchCompletions] Request cd3b06ec-9b52-493e-ba5f-b1da580e74f3 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 361.54120000009425ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:22.762
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:22.762
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:22.772
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:22.773
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:23.012
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:23.012
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:23.195
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:23.195
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:23.523
+!MESSAGE [Info]	[fetchCompletions] Request c5cb37f8-2af2-45e4-883b-3e52f362d93f at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 326.9886000000406ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:23.751
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:23.752
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:24.103
+!MESSAGE [Info]	[fetchCompletions] Request 9a01619e-606b-4e7c-9790-047a75a3cb14 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 338.75050000008196ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:24.241
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:24.242
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:24.603
+!MESSAGE [Info]	[fetchCompletions] Request 5f1ab766-6763-4b55-8587-ce9b55180544 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 359.75580000015907ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:24.704
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:24.704
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:25.072
+!MESSAGE [Info]	[fetchCompletions] Request 363cca92-853f-471a-b770-82eb00f7b690 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 365.3645999999717ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:25.232
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:25.232
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:25.232
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:25.233
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:25.233
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:25.233
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:25.340
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:25.340
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:25.555
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:25.555
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:25.901
+!MESSAGE [Info]	[fetchCompletions] Request d551e823-a45c-47ad-b320-b0cf26327006 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 344.4506999999285ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:26.066
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:26.066
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:26.066
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:26.066
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:26.067
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:26.067
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:26.094
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:26.095
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:26.245
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:26.246
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:26.583
+!MESSAGE [Info]	[fetchCompletions] Request 0dcb68d6-5854-4187-9846-fdb4aa8e65fa at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 336.9739999999292ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:26.780
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:26.781
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:26.781
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:26.781
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:26.781
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:26.781
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:28.702
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:28.703
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:28.917
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:28.917
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:29.243
+!MESSAGE [Info]	[fetchCompletions] Request 02f37580-5fe4-48ba-9343-6e2b5d930feb at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 315.81990000000224ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:29.406
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:29.406
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:29.407
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:29.407
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:29.407
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:29.407
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:29.639
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:29.639
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:29.973
+!MESSAGE [Info]	[fetchCompletions] Request f128ca23-320a-4ffc-b070-51f13fe75550 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 320.9895999999717ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:30.140
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:30.140
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:30.142
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:30.143
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:30.143
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:30.143
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:30.531
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:30.531
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:30.792
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:30.793
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:31.002
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:31.003
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:31.364
+!MESSAGE [Info]	[fetchCompletions] Request 6d404afd-8df8-4eb2-98e3-082e6f356222 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 361.11269999993965ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:31.966
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:31.967
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:32.127
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:32.127
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:32.441
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:32.442
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:32.712
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:32.712
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:32.840
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:32.841
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:33.121
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:33.122
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:33.439
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:33.439
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:33.639
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:33.641
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:33.863
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:33.863
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:34.185
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:34.186
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:34.447
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:34.447
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:34.787
+!MESSAGE [Info]	[fetchCompletions] Request cba839a9-9ea9-4c5c-a2fe-7d09f21b2c67 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 339.5037000000011ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:34.853
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:34.854
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:34.864
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:34.865
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:34.878
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:34.879
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:34.929
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:34.930
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:35.309
+!MESSAGE [Info]	[fetchCompletions] Request c130d14d-fe3f-4d99-ba21-e2c34165c57f at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 379.52619999996386ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:35.328
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:35.329
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:35.658
+!MESSAGE [Info]	[fetchCompletions] Request 55884632-c6d2-4a9f-94ed-8c55f3dd2a29 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 328.0167000000365ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:35.695
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:35.696
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:35.844
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:35.844
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:36.174
+!MESSAGE [Info]	[fetchCompletions] Request dd89bc99-f0cb-47a4-9849-395b256fb247 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 330.11330000008456ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:36.240
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:36.241
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:36.247
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:36.247
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:36.251
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:36.252
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:37.338
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:37.338
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:37.443
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:37.443
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:37.782
+!MESSAGE [Info]	[fetchCompletions] Request 96c190bf-d7db-4497-8015-891eabadd475 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 329.2989000000525ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:37.823
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:37.825
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:37.829
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:37.829
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:37.837
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:37.838
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:37.890
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:37.890
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:38.049
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:38.050
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:39.752
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:39.752
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:40.100
+!MESSAGE [Info]	[fetchCompletions] Request 4ca3cbfa-2274-42cf-bde2-76d1b865f087 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 343.2779000001028ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:40.168
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:40.169
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:40.188
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:40.188
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:40.201
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:40.201
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:40.383
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:40.384
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:42.518
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:42.519
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:42.740
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:42.740
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:42.899
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:42.900
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:43.226
+!MESSAGE [Info]	[fetchCompletions] Request d6d285f8-681a-4e66-99d9-b0e26ad96f5f at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 326.0357999999542ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:43.519
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:43.519
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:43.525
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:43.525
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:43.996
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:43.997
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:47.199
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:47.199
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:47.366
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:47.366
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:47.544
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:47.545
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:47.755
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:47.756
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:48.085
+!MESSAGE [Info]	[fetchCompletions] Request 825b8851-527d-4a3e-9fdc-e21758c432d3 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 328.80409999983385ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:48.324
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:48.324
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:48.685
+!MESSAGE [Info]	[fetchCompletions] Request 14958e1b-a0ec-47f1-8854-12fc51d82529 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 357.3405999999959ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:48.962
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:48.962
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:48.977
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:48.978
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:48.978
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:48.978
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:49.059
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:49.059
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:49.344
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:49.345
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:49.493
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:49.494
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:49.655
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:49.655
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:49.871
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:49.872
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:50.198
+!MESSAGE [Info]	[fetchCompletions] Request 1c5cc375-8ebe-4bbc-9bde-bbe59e9f314e at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 324.6636000000872ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:50.481
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:50.482
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:50.488
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:50.489
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:50.491
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:50.491
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:52.418
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:52.418
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:53.022
+!MESSAGE [Info]	[fetchCompletions] Request a14c5490-bcab-4c8e-aaca-f3dceaa26639 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 600.2871000000741ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:53.085
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:53.086
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:53.086
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:53.087
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:53.087
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:53.087
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:53.180
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:53.180
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:54.941
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:54.941
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:55.166
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:55.166
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:55.514
+!MESSAGE [Info]	[fetchCompletions] Request c28402a8-b2e5-4641-98df-4d069e84c9ed at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 336.8947000000626ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:55.604
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:55.604
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:55.760
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:55.760
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:55.897
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:55.897
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:57.698
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:57.698
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:58.843
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:58.843
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:59.001
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:59.001
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:59.170
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:59.171
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:59.387
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:59.387
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:59.600
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:31:59.601
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:31:59.992
+!MESSAGE [Info]	[fetchCompletions] Request ff99cb6a-c737-456d-a3ef-b73646c8f0de at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 391.28679999988526ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:00.150
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:00.150
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:00.418
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:00.418
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:00.749
+!MESSAGE [Info]	[fetchCompletions] Request f2dacb85-ed13-4455-a126-70653dedbcd9 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 331.002400000114ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:00.894
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:00.894
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:01.288
+!MESSAGE [Info]	[fetchCompletions] Request 5c024ca4-ff94-4abf-9f44-eb9f7a3f72b6 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 384.44270000001416ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:01.321
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:01.321
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:01.664
+!MESSAGE [Info]	[fetchCompletions] Request 3c90f0a7-0728-4170-aa16-3be2355ed601 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 341.84700000006706ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:01.700
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:01.701
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:01.885
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:01.885
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:02.237
+!MESSAGE [Info]	[fetchCompletions] Request 7f57da7b-2147-432c-ad58-fcf7d3d41bb5 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 350.29819999984466ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:02.512
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:02.512
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:02.520
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:02.520
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:02.520
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:02.520
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:02.576
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:02.576
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:03.057
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:03.058
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:03.430
+!MESSAGE [Info]	[fetchCompletions] Request afd9a0e1-77d4-4d6d-b5b0-09d90f352503 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 370.29590000002645ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:03.698
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:03.698
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:03.698
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:03.698
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:03.704
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:03.704
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:04.040
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:04.040
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:08.575
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:08.575
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:09.013
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:09.013
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:09.347
+!MESSAGE [Info]	[fetchCompletions] Request dcdce383-84b5-4c56-9978-df3e343f3012 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 332.09009999991395ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:09.564
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:09.565
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:09.580
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:09.581
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:09.581
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:09.581
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:10.620
+!MESSAGE [Info]	[code-referencing] Calling Match
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:11.604
+!MESSAGE [Info]	[code-referencing] No match found
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:14.081
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:14.081
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:14.492
+!MESSAGE [Info]	[fetchCompletions] Request f37c0125-434d-4e3b-9511-180712108f3d at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 410.08740000007674ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:14.526
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:14.527
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:14.717
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:14.717
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:15.064
+!MESSAGE [Info]	[fetchCompletions] Request 4c25375e-4c01-48b9-adaa-fc640f0b14cc at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 344.98059999989346ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:15.302
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:15.303
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:15.303
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:15.304
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:15.304
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:15.304
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:17.536
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:17.536
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:17.868
+!MESSAGE [Info]	[fetchCompletions] Request aabf235d-d683-4deb-a75d-ad76fcf779c7 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 319.187099999981ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:17.995
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:17.996
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:18.249
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:18.250
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:18.397
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:18.398
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:18.504
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:18.505
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:18.829
+!MESSAGE [Info]	[fetchCompletions] Request ffe2580e-1622-4e72-8339-d602af52e135 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 322.27110000001267ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:19.034
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:19.034
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:19.034
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:19.034
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:19.039
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:19.039
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:19.351
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:19.352
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:19.569
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:19.570
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:19.728
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:19.729
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:20.022
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:20.023
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:20.245
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:20.245
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:20.355
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:20.355
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:20.584
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:20.585
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:20.767
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:20.768
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:21.157
+!MESSAGE [Info]	[fetchCompletions] Request e7831462-c8b0-4511-8316-9bf1a53514c4 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 388.28169999993406ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:21.242
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:21.242
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:21.599
+!MESSAGE [Info]	[fetchCompletions] Request 56ae290d-4b0b-4472-8da9-72010479a6e5 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 355.7168000000529ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:21.734
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:21.735
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:21.925
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:21.926
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:22.248
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:22.248
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:22.410
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:22.410
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:22.643
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:22.643
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:22.746
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:22.747
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:22.909
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:22.909
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:23.319
+!MESSAGE [Info]	[fetchCompletions] Request d7934741-8068-46fe-aeec-4b38468f4530 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 409.53509999997914ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:23.434
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:23.435
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:23.783
+!MESSAGE [Info]	[fetchCompletions] Request cbbb210f-d70b-41cc-84b7-7c058ca40dcf at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 340.532200000016ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:23.956
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:23.956
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:24.071
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:24.071
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:24.413
+!MESSAGE [Info]	[fetchCompletions] Request 206611e9-360e-42d1-8908-d6bb485edd7e at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 330.5067999998573ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:24.639
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:24.640
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:24.999
+!MESSAGE [Info]	[fetchCompletions] Request 58f6022e-9558-4edf-8c9f-f496ae299739 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 358.36550000007264ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:25.242
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:25.242
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:25.254
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:25.254
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:25.254
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:25.254
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:25.526
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:25.526
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:25.688
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:25.688
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:26.069
+!MESSAGE [Info]	[fetchCompletions] Request 983ab0c4-1144-4383-9d20-e52d6f725004 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 376.3041000000667ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:26.194
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:26.194
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:26.422
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:26.423
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:26.778
+!MESSAGE [Info]	[fetchCompletions] Request 7659aff7-810b-405b-9af6-5030ba180571 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 353.7724000001326ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:27.029
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:27.030
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:27.030
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:27.031
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:27.031
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:27.031
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:27.998
+!MESSAGE [Info]	[code-referencing] Calling Match
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:28.329
+!MESSAGE [Info]	[code-referencing] No match found
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:32.863
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:32.863
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:33.214
+!MESSAGE [Info]	[fetchCompletions] Request c0bbee36-f1bb-47a2-a5ea-d2ac68ea9637 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 345.0686000001151ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:33.250
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:33.250
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:33.262
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:33.263
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:33.267
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:33.268
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:37.912
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:37.913
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:37.913
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:38.073
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:38.074
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:38.451
+!MESSAGE [Info]	[fetchCompletions] Request 78d6dcb7-8019-41d7-9b41-b2e65c1e3555 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 376.0231999999378ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:38.453
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:38.453
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:38.453
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:38.453
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:38.453
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:38.453
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:39.332
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:39.332
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:39.720
+!MESSAGE [Info]	[fetchCompletions] Request 6977abbd-a227-4227-83f2-bbc4d8c83552 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 382.7158000001218ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:39.802
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:39.803
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:39.815
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:39.815
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:39.815
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:39.816
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:40.030
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:40.032
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:40.391
+!MESSAGE [Info]	[fetchCompletions] Request b45d9ec9-3e3c-4dcc-a9c5-3d3f7e716183 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 358.79120000009425ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:41.150
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:41.151
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:41.314
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:41.314
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:41.678
+!MESSAGE [Info]	[fetchCompletions] Request ec165777-3690-46b6-8bbb-17f34e52e835 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 362.9332000000868ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:42.402
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:42.403
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:42.403
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:42.403
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:42.408
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:42.409
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:44.197
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:44.198
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:44.462
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:44.462
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:44.808
+!MESSAGE [Info]	[fetchCompletions] Request 4f6a6adf-e4ce-4feb-8403-7d41eaf5c6ce at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 345.2501999998931ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:44.991
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:44.992
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:45.136
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:45.136
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:45.301
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:45.301
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:45.477
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:45.477
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:45.822
+!MESSAGE [Info]	[fetchCompletions] Request c2558973-62df-4734-a214-a7c78df3266c at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 344.8008999999147ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:46.476
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:46.477
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:46.484
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:46.484
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:46.484
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:46.486
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:47.781
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:47.781
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:49.719
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:49.720
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:49.847
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:49.847
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:49.995
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:49.995
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:50.287
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:50.287
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:50.395
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:50.396
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:50.558
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:50.559
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:50.742
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:50.743
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:51.071
+!MESSAGE [Info]	[fetchCompletions] Request cad9f10b-ca8e-4b27-a204-0e2f7c2c33c8 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 325.99640000006184ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:51.239
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:51.239
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:51.394
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:51.394
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:51.707
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:51.707
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:51.869
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:51.870
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:52.012
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:52.013
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:52.364
+!MESSAGE [Info]	[fetchCompletions] Request 4f3e0283-9e45-4299-8c5b-760f2db26698 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 335.1844000001438ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:52.617
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:52.617
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:52.619
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:52.620
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:52.624
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:52.624
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.020
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.021
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.356
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.356
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.512
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.512
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.635
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.635
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.784
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.785
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.922
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:53.923
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:54.313
+!MESSAGE [Info]	[fetchCompletions] Request b6befadc-8986-4c17-ab60-e55958203da1 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 388.32829999993555ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:54.589
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:54.589
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:54.597
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:54.597
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:54.597
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:54.597
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:55.562
+!MESSAGE [Info]	[code-referencing] Calling Match
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:55.894
+!MESSAGE [Info]	[code-referencing] No match found
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:57.657
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:57.658
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:58.005
+!MESSAGE [Info]	[fetchCompletions] Request a7a8c1c5-5ce0-47fe-b603-909ecffb47d9 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 333.4732999999542ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:58.077
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:58.077
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:58.078
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:58.078
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:58.079
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:58.079
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:58.112
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:58.113
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:58.477
+!MESSAGE [Info]	[fetchCompletions] Request 2d4505cb-da9e-433e-a8db-0956492a09ae at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 351.9690999998711ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:58.540
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:58.540
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:58.899
+!MESSAGE [Info]	[fetchCompletions] Request 847ea7c3-c23f-4e01-a84d-3628e131b6ac at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 357.7976000001654ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:58.938
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:58.938
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:59.269
+!MESSAGE [Info]	[fetchCompletions] Request 862c143f-a5dd-4765-b9d8-47e096cfe99c at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 328.8519999999553ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:59.336
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:59.337
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:59.337
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:59.337
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:59.338
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:59.338
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:59.362
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:59.363
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:59.708
+!MESSAGE [Info]	[fetchCompletions] Request 68deae65-2e4a-465e-94e4-c8cf8ea12727 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 343.90200000000186ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:59.776
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:59.776
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:59.776
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:59.776
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:32:59.777
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:59.777
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:32:59.973
+!MESSAGE [Info]	[code-referencing] Calling Match
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:00.294
+!MESSAGE [Info]	[code-referencing] No match found
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:10.398
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:10.399
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:10.400
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:10.553
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:10.553
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:10.702
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:10.702
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:11.034
+!MESSAGE [Info]	[fetchCompletions] Request 43ec6a90-b467-42a4-beed-007133ea3227 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 327.9421999999322ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:11.148
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:11.148
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:11.160
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:11.161
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:11.161
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:11.161
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:11.544
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:11.545
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:11.732
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:11.733
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:12.099
+!MESSAGE [Info]	[fetchCompletions] Request 990508b2-9234-4734-b060-ed662c200b67 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 365.20999999996275ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:12.179
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:12.179
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:12.180
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:12.180
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:12.180
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:12.181
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:14.312
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:14.312
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:14.659
+!MESSAGE [Info]	[fetchCompletions] Request 1a5f18e6-d273-4ed6-a4e2-0fcfe5cb7e3e at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 346.626200000057ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:14.711
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:14.711
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:14.712
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:14.712
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:14.712
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:14.712
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:14.724
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:14.724
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:14.850
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:14.850
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:15.228
+!MESSAGE [Info]	[fetchCompletions] Request 547a4371-45c4-416b-b080-a06cc869691c at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 376.1790000000037ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:15.386
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:15.387
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:15.394
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:15.394
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:15.395
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:15.395
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:15.824
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:15.824
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:15.954
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:15.954
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:16.309
+!MESSAGE [Info]	[fetchCompletions] Request 0ec551df-3255-4842-9bba-63cf2b5c458f at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 345.0728999997955ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:16.382
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:16.383
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:16.383
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:16.384
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:16.388
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:16.388
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:17.655
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:17.655
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:17.814
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:17.815
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:17.996
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:17.997
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:18.355
+!MESSAGE [Info]	[fetchCompletions] Request f7fe9e9d-93fd-4b57-a5e9-41d74146e602 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 357.43189999996684ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:18.420
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:18.421
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:18.425
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:18.426
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:18.440
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:18.440
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:20.182
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:20.183
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:20.538
+!MESSAGE [Info]	[fetchCompletions] Request a379b373-749b-4f6b-8856-ed9b168db304 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 344.3660999999847ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:20.604
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:20.604
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:20.615
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:20.615
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:20.616
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:20.616
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:20.749
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:20.749
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:22.679
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:23.616
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:23.709
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:23.875
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:24.097
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:24.224
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:24.357
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:24.521
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:25.707
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:26.071
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:26.391
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:26.508
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:26.825
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:27.028
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:27.119
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:27.865
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:29.687
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:29.688
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:30.039
+!MESSAGE [Info]	[fetchCompletions] Request b4f5c86e-7f07-4ccb-a172-d35793191946 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 349.59519999986514ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:30.090
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:30.091
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:30.091
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:30.091
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:30.091
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:30.092
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:32.955
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:32.956
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:33.138
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:33.139
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:33.558
+!MESSAGE [Info]	[fetchCompletions] Request 3beaaea5-70af-4167-8ad0-4a7b185e246e at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 418.0755000000354ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:33.678
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:33.679
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:33.680
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:33.681
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:33.702
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:33.702
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:33.803
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:33.804
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:34.412
+!MESSAGE [Info]	[fetchCompletions] Request 596fb019-863e-417b-aa52-d0e11f2ccab9 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 606.9942000000738ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:34.447
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:34.447
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:34.652
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:34.653
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:34.982
+!MESSAGE [Info]	[fetchCompletions] Request c4f49f29-125b-43cb-bdc9-115de59027c6 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 328.95979999983683ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:35.047
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:35.047
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:35.057
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:35.057
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:35.057
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:35.058
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:35.367
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:35.367
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:36.395
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:36.395
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:36.734
+!MESSAGE [Info]	[fetchCompletions] Request 6bc4a1f5-54ca-43a9-95a3-375f3796f259 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 323.9787999999244ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:36.813
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:36.813
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:36.817
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:36.818
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:36.823
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:36.823
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:49.244
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:49.244
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:49.407
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:49.408
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:49.750
+!MESSAGE [Info]	[fetchCompletions] Request 54b91d83-6c68-4f6e-ac7e-e8296a1771d2 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 324.4179000000004ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:49.979
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:49.979
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:49.979
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:49.980
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:49.980
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:49.980
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:51.139
+!MESSAGE [Info]	[code-referencing] Calling Match
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:51.469
+!MESSAGE [Info]	[code-referencing] No match found
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:55.428
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:55.429
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:55.785
+!MESSAGE [Info]	[fetchCompletions] Request 9a657b43-ecd3-4330-b10e-4143a0e36e4a at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 345.67479999992065ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:55.794
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:55.794
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:55.794
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:55.794
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:33:55.794
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:33:55.794
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:12.245
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:12.454
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:12.645
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:13.086
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:13.850
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:14.054
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:14.400
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:14.580
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:14.768
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:14.990
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:15.406
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:16.200
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:16.379
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:22.005
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:22.005
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:34:22.358
+!MESSAGE [Info]	[fetchCompletions] Request 1d0018a9-4db0-47c4-ad54-3bb60c267a44 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 351.497199999867ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:22.436
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:34:22.436
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:22.441
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:34:22.441
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:34:22.450
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:22.450
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:34:23.960
+!MESSAGE [Info]	[code-referencing] Calling Match
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:34:24.679
+!MESSAGE [Info]	[code-referencing] No match found
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:26.285
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:26.285
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:34:26.665
+!MESSAGE [Info]	[fetchCompletions] Request 218b4cdc-7a87-4ddd-83c2-988519101cb9 at <https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions> finished with 200 status after 372.63449999992736ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:26.708
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:34:26.709
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:26.733
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:34:26.734
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:34:26.735
+!MESSAGE [Info]	[streamChoices] solution 2 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-12 23:34:26.735
+!MESSAGE [Info]	[streamChoices] solution 1 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:35:25.343
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:35:44.329
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:35:45.836
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:35:45.961
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:04.378
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:05.148
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:05.450
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:05.926
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:06.100
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:06.346
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:08.057
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:09.587
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:12.127
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:15.705
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:16.059
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:16.136
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:16.407
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:18.048
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:19.099
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:19.990
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:21.199
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:21.284
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:21.441
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:21.744
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-12 23:36:22.070
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-09-13 00:01:43.441
+!MESSAGE [C4E] Internal server stopped: Server@69dfd3dc{STOPPED}[10.0.25,sto=0]
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-09-13 00:01:43.442
+!MESSAGE [C4E] Internal server stopped: true
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-13 00:01:44.445
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-13 00:01:44.446
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+!SESSION 2025-09-17 18:28:31.236 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-17 18:28:39.308
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-09-17 18:28:39.802
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.31.0 (1039) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-17 18:28:49.633
+!MESSAGE Logback config file: D:\java programs\Spring\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-09-17 18:29:10.254
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\HP'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 0 2025-09-17 18:29:10.459
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4926)
+	at org.eclipse.swt.SWT.error(SWT.java:4860)
+	at org.eclipse.swt.SWT.error(SWT.java:4831)
+	at org.eclipse.swt.graphics.GC.drawImage(GC.java:1044)
+	at org.eclipse.swt.graphics.GC.drawImage(GC.java:994)
+	at org.eclipse.swt.custom.CLabel.onPaint(CLabel.java:577)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:268)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4338)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1214)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1238)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1223)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1543)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4836)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:336)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5106)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3722)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:627)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1431)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1403)
+
+!ENTRY com.genuitec.copilot4eclipse.boot 1 0 2025-09-17 18:29:10.575
+!MESSAGE [C4E] booting
+
+!ENTRY com.genuitec.copilot4eclipse.copilotapi 1 0 2025-09-17 18:29:10.731
+!MESSAGE [C4E] Language server: EMBEDDED_NODE
+
+!ENTRY org.eclipse.ui 4 0 2025-09-17 18:29:14.187
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4926)
+	at org.eclipse.swt.SWT.error(SWT.java:4860)
+	at org.eclipse.swt.SWT.error(SWT.java:4831)
+	at org.eclipse.swt.graphics.GC.drawImage(GC.java:1044)
+	at org.eclipse.swt.graphics.GC.drawImage(GC.java:994)
+	at org.eclipse.swt.custom.CLabel.onPaint(CLabel.java:577)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:268)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4338)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1214)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1238)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1223)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1543)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4836)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:336)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5106)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3722)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:627)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1431)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1403)
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-17 18:29:19.661
+!MESSAGE [Info]	[lsp] GitHub Copilot Language Server 1.348.0 initialized
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-09-17 18:29:19.702
+!MESSAGE [C4E] EdgeDataDir: D:\java programs\Spring\.metadata\.plugins\com.genuitec.copilot4eclipse.chat\edgedata
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-09-17 18:29:20.233
+!MESSAGE [Info]	[certificates] Removed 11 expired certificates
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-09-17 18:29:21.439
+!MESSAGE [C4E] Conversation persistence: D:/java programs/Spring/.metadata/.plugins/com.genuitec.copilot4eclipse/chatdata
+
+!ENTRY com.genuitec.copilot4eclipse.copilotapi 1 0 2025-09-17 18:29:21.589
+!MESSAGE [C4E] Copilot API proxy: native mode
+
+!ENTRY com.genuitec.copilot4eclipse.boot 1 0 2025-09-17 18:29:21.871
+!MESSAGE [C4E] API started
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-09-17 18:29:22.278
+!MESSAGE [C4E] Internal server started: true uri: http://localhost:53871/chat
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:23.126
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:23.588
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.546
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.547
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.547
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.548
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.548
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.549
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.549
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.550
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.550
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.551
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.551
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.551
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.552
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.640
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.641
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.642
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.643
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.644
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.644
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.645
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.646
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.646
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.647
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.648
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.648
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.649
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-09-17 18:29:24.649
+!MESSAGE [Error]	[default] User selected model gpt-4o-copilot is not in the list of generic models: gpt-41-copilot, falling back to default model.
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-09-17 18:29:26.503
+!MESSAGE [C4E] Workspace labels: java,maven
